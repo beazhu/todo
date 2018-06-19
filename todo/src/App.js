@@ -2,15 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import firebase from "firebase";
-// Initialize Firebase
-// TODO: Replace with your project's customized code snippet
-var config = {
-  apiKey: "AIzaSyB4ahAoM1pomb9f7z-los9eZoWaZz_f6lM",
-  authDomain: "bzoo-todo.firebaseapp.com",
-    projectId: "bzoo-todo",
-    storageBucket: "bzoo-todo.appspot.com",
-    messagingSenderId: "690645210065"
-};
+
 firebase.initializeApp(config);
 class App extends Component {
 
@@ -87,11 +79,6 @@ class Tasks extends Component {
   rem(index) {
     document.getElementById(index).innerHTML="";
     console.log("rem",index);
-
-    // var oldTasks = this.state.tasks;
-    // oldTasks.splice(index,1);
-    // this.setState({tasks: oldTasks});
-
   }
   render() {
     return(
